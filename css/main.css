@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: Lato, sans-serif;
+  line-height: 1.5;
+}
+body {
+  min-height: 100vh;
+  background-color: #333;
+  color: #eee;
+}
+nav,
+main,
+footer {
+  padding: 0.25rem 2rem;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Noto Serif', serif;
+}
+p {
+  line-height: 1.7;
+  margin: 1.5rem 0;
+}
+
+.meal-cols {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.meal-cols .collection {
+  flex: 40vw 1 1;
+  align-self: stretch;
+  background-color: white;
+}
+.meal-cols .draggable {
+  cursor: grab;
+}

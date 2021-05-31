@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--Import Google Material Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import Google Fonts `Noto Serif` and `Lato` -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Meals Per Day</title>
+  </head>
+  <body class="light-green darken-3">
+    <header class="navbar-fixed">
+      <nav class="light-green darken-4">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Backpack Mealplans</a>
+          <ul id="nav-mobile" class="right hide-on-sm-and-down">
+            <li><a href="meals-per-day.html">Meals</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h4>Meals Per Day</h4>
+      <p>
+        Step one in creating your meal plan is to determine how many meals there
+        will be each day. Drag and drop the meals from the left column into the
+        right column. Meals will be added in the order that you drop them on to
+        the right column.
+      </p>
+      <section class="meal-cols">
+        <ul class="collection" id="meal-labels">
+          <li
+            class="collection-item draggable grey-text text-darken-4"
+            draggable="true"
+          >
+            Breakfast
+          </li>
+          <li
+            class="collection-item draggable grey-text text-darken-4"
+            draggable="true"
+          >
+            Second Breakfast
+          </li>
+          <li
+            class="collection-item draggable grey-text text-darken-4"
+            draggable="true"
+          >
+            Lunch
+          </li>
+          <li
+            class="collection-item draggable grey-text text-darken-4"
+            draggable="true"
+          >
+            Dinner
+          </li>
+          <li
+            class="collection-item draggable grey-text text-darken-4"
+            draggable="true"
+          >
+            Snack
+          </li>
+        </ul>
+        <ul class="collection drop-target" id="meal-scaffold"></ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2021 Turkey Stuff Inc.</p>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
