@@ -33,9 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
       let btn3 = document.getElementById('btnSaveMeals');
       btn3.addEventListener('click', (ev) => {
         ev.preventDefault();
-        let m = modalInstances[0];
-        m.open();
+        //confirm the leaving of empty slots
+        let empty = document.querySelectorAll('td:not(.filled)').length;
+        console.log(`There are ${empty} empty slots`);
+        if (empty !== 0) {
+          let answer = confirm(`There are ${empty} empty slots. Continue?`);
+          if (answer) {
+            let m = modalInstances[0];
+            m.open();
+          }
+        }
       });
+
       let btn4 = document.querySelector('#length-modal a');
       btn4.addEventListener('click', saveMealsAndContinue);
       break;
@@ -79,7 +88,7 @@ function dropRecipe(ev) {
   let td = ev.target;
   td.textContent = txt;
   td.style.outline = 'none';
-  td.className = 'white light-green-text darken-4-text';
+  td.className = 'white light-green-text darken-4-text filled';
   td.removeEventListener('drop', dropRecipe);
   td.removeEventListener('drop', dragoverRecipe);
   td.removeEventListener('drop', dragleaveRecipe);
@@ -171,7 +180,7 @@ function addToTemplate(label) {
 }
 function saveMealsAndContinue(ev) {
   ev.preventDefault();
-  //confirm the leaving of empty slots
+
   //TODO: add the ability to just type something in a meal slot
   //show modal to give trip a name
   //gather the reference ids for meal-slots and recipes
