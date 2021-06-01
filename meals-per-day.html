@@ -24,18 +24,33 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Meals Per Day</title>
   </head>
-  <body class="light-green darken-3">
+  <body id="meals-per-day" class="light-green darken-3">
     <header class="navbar-fixed">
       <nav class="light-green darken-4">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Backpack Mealplans</a>
-          <ul id="nav-mobile" class="right hide-on-sm-and-down">
+          <a href="#!" class="brand-logo">Backpack Mealplans</a>
+          <a href="#" data-target="side-nav" class="sidenav-trigger right"
+            ><i class="material-icons">dehaze</i></a
+          >
+          <ul id="main-nav" class="right hide-on-med-and-down">
             <li><a href="meals-per-day.html">Meals</a></li>
             <li><a href="recipes.html">Recipes</a></li>
           </ul>
         </div>
       </nav>
     </header>
+    <ul id="side-nav" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+            <img src="img/mountain.jpg" />
+          </div>
+          <a href="#name"><span class="white-text name">John Doe</span></a>
+        </div>
+      </li>
+      <li><a href="meals-per-day.html">Meals</a></li>
+      <li><a href="recipes.html">Recipes</a></li>
+    </ul>
     <main>
       <h4>Meals Per Day</h4>
       <p>

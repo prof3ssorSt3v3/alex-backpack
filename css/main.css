@@ -45,3 +45,17 @@ p {
 .meal-cols .draggable {
   cursor: grab;
 }
+.user-view .background {
+  min-height: 10rem;
+}
+.sidenav li:first-child {
+  min-height: 10rem;
+}
+@media all and (max-width: 810px) {
+  nav .brand-logo {
+    font-size: 1rem;
+  }
+  .nav-wrapper {
+    overflow: hidden;
+  }
+}
