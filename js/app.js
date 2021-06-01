@@ -31,7 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // console.log('add meal slots table');
       setUpMealPlanDragging();
       let btn3 = document.getElementById('btnSaveMeals');
-      btn3.addEventListener('click', saveMealsAndContinue);
+      btn3.addEventListener('click', (ev) => {
+        ev.preventDefault();
+        let m = modalInstances[0];
+        m.open();
+      });
+      let btn4 = document.querySelector('#length-modal a');
+      btn4.addEventListener('click', saveMealsAndContinue);
       break;
     case 'recipes':
       break;
