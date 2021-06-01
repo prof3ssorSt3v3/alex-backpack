@@ -30,16 +30,23 @@ p {
   margin: 1.5rem 0;
 }
 
-.meal-cols {
-  display: flex;
-  flex-direction: row;
+#meals-per-day .meal-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2rem 1fr;
   gap: 2rem;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  /* justify-content: space-between;
+  align-items: flex-start; */
+}
+#meals-plan .meal-cols {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 2rem 1fr;
+  gap: 2rem;
 }
 .meal-cols .collection {
-  flex: 40vw 1 1;
-  align-self: stretch;
+  /* flex: 0 1 45vw; */
+  /* align-self: stretch; */
   background-color: white;
 }
 .meal-cols .draggable {
@@ -50,6 +57,17 @@ p {
 }
 .sidenav li:first-child {
   min-height: 10rem;
+}
+#recipe-list {
+  height: calc((1.5rem + 20px) * 8);
+  overflow-y: scroll;
+}
+table {
+  border: 1px solid white;
+}
+table th,
+table td {
+  width: 120px;
 }
 @media all and (max-width: 810px) {
   nav .brand-logo {

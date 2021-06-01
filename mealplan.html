@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Meals Per Day</title>
   </head>
-  <body id="meals-per-day" class="light-green darken-3">
+  <body id="meals-plan" class="light-green darken-3">
     <header class="navbar-fixed">
       <nav class="light-green darken-4">
         <div class="nav-wrapper">
@@ -54,73 +54,80 @@
     </ul>
     <!-- main content -->
     <main>
-      <h4>Meals Per Day</h4>
+      <h4>Build the Trip Meal Plan</h4>
       <p>
-        Step one in creating your meal plan is to determine how many meals there
-        will be each day. Drag and drop the meals from the left column into the
-        right column. Meals will be added in the order that you drop them on to
-        the right column.
+        Step two in creating your meal plan is to drag recipes into the meal
+        slots provided in each day of your trip. Drag and drop the meals from
+        the left column into the right column. Recipes will be added in the
+        order that you drop them on to the right column.
       </p>
       <section class="meal-cols">
-        <h5>Labels</h5>
-        <h5>Each Day</h5>
-        <ul class="collection" id="meal-labels">
+        <h5>Recipes</h5>
+        <h5>Days</h5>
+        <ul class="collection" id="recipe-list">
           <li
             class="collection-item draggable grey-text text-darken-4"
             draggable="true"
+            data-id="20274"
           >
-            Breakfast
+            Churros
           </li>
           <li
             class="collection-item draggable grey-text text-darken-4"
             draggable="true"
+            data-id="1111"
           >
-            Second Breakfast
+            Peking Duck
           </li>
           <li
             class="collection-item draggable grey-text text-darken-4"
             draggable="true"
+            data-id="92928"
           >
-            Lunch
+            Deconstructed Tofu
           </li>
           <li
             class="collection-item draggable grey-text text-darken-4"
             draggable="true"
+            data-id="45746"
           >
-            Dinner
+            Raw Kale
           </li>
           <li
             class="collection-item draggable grey-text text-darken-4"
             draggable="true"
+            data-id="345"
           >
-            Snack
+            Skittles Omlette
           </li>
         </ul>
-        <ul class="collection drop-target" id="meal-scaffold"></ul>
+        <table class="drop-target" id="meal-plans">
+          <!-- columns and rows to be build via JS and localstorage -->
+        </table>
       </section>
       <p class="right-align">
         <button
-          id="btnSaveLabels"
+          id="btnSaveMeals"
           class="waves-effect waves-light btn orange black-text"
         >
-          Save Labels &amp; Continue
+          Save Meal Plan &amp; Continue
         </button>
       </p>
     </main>
-    <!-- modal for trip length -->
+    <!-- modal for trip name -->
     <div id="length-modal" class="modal light-green white-text">
       <div class="modal-content">
-        <h4>Length of Trip</h4>
-        <p>How many days is your meal plan?</p>
+        <h4>Name of Trip</h4>
+        <p>What name do you want to use for this trip?</p>
         <div class="input-field">
           <input
-            placeholder=""
-            inputmode="numeric"
-            id="days"
+            placeholder="Trip Name"
+            inputmode="text"
+            id="trip-name"
             type="text"
             class="validate white-text"
           />
-          <label for="days" class="white-text">Number of Days</label>
+          <label for="trip-name" class="white-text">Name of Trip</label>
         </div>
       </div>
       <div class="modal-footer">
